@@ -1,0 +1,267 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.container {
+
+    text-align: center;
+    background:rgb(255, 255, 255);
+    padding-top: 20%;
+    padding-bottom: 20%;
+    padding-right: 35%;
+    padding-left: 35%;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.tormenta20MainMenu {
+    display: none;
+    text-align: center;
+    background-size: cover;
+    justify-content: center;
+    background-image: url(images/background\ tormenta-main-menu.png);
+    padding-top: 20%;
+    padding-bottom: 20%;
+    padding-right: 35%;
+    padding-left: 35%;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    
+}
+
+.DndMainMenu {
+    display: none;
+    text-align: center;
+    background-size: cover;
+    justify-content: center;
+    background-image: url(images/background-D&D-main-menu.jpg);
+    padding-top: 20%;
+    padding-bottom: 20%;
+    padding-right: 35%;
+    padding-left: 35%;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.CofcMainMenu {
+    display: none;
+    text-align: center;
+    background-size: cover;
+    justify-content: center;
+    background-image: url(images/background-Cofc-main-menu.jpg);
+    padding-top: 20%;
+    padding-bottom: 20%;
+    padding-right: 35%;
+    padding-left: 35%;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.rollthedice{
+    width: 100px; 
+    background-color: white;
+    padding: 5px;
+    right: 3%;
+    border-radius: 8px;
+    bottom: 79%;
+    border-right: 1px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    transition: transform 0.3s ease; 
+    
+}
+#ficha{
+    width: 100px; 
+    padding: 5px;
+    background-color: #c52621;
+    left: 70%;
+    border-radius: 8px;
+    bottom: 25%;
+    border-right: 1px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    transition: transform 0.3s ease; 
+    
+
+}
+
+.MainMenu-button{
+    text-align: center;
+    width: 100px; 
+    background-color: rgb(0, 0, 0);
+    padding: 8px;
+    right: 2.6%;
+    border-radius: 8px;
+    bottom: 70%;
+    border-right: 1px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    transition: transform 0.3s ease; 
+}
+
+
+.sidebar {
+    width: 40px; /* Largura da barra lateral */
+    background: #ffffff;
+    padding: 5px;
+    right: 91%;
+    border-right: 1px solid #ddd;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    transition: transform 0.3s ease; /* Transição suave para esconder e mostrar */
+}
+
+.sidebar.hidden {
+    display: flex;
+    transform: translateX(-250%); /* Esconde a barra lateral */
+}
+
+.sidebar-content {
+    display: block;
+    transition: opacity 0.3s ease;
+}
+
+.toggle-btn {
+    position: absolute;
+    top: 20px;
+    right: -40px; /* Ajuste conforme necessário */
+    width: 40px;
+    height: 40px;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+main {
+    flex: 1;
+    padding: 20px;
+}
+
+.dice-container {
+    margin: 20px 0;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 0px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+
+.dice-container {
+    margin: 20px 0;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#dice20, #dice6, #dice4, #dice10, #dice12, #dice8, #dice100{
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    transition: transform 1s;
+}
+
+#dice20, #dice6, #dice4, #dice10, #dice12, #dice8, #dice100 {
+    font-size: 100px;
+    margin: 20px 0;
+    display: inline-block;
+}
+
+.shield{
+    display: inline-block;
+    position: relative;
+}
+#result {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+.escudo{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+@keyframes roll {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.rolling {
+    animation: roll 1s infinite;
+}
+
+/*  BOTOES MAIN MENU */ 
+
+.tormenta20 {
+    width: 250px;
+    position: absolute;
+    left: 300px;
+    top: 20%;
+    transform: translateY(-50%);
+    padding: 10px 20px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+.Dnd {
+    width: 250px;
+    position: absolute;
+    left: 600px;
+    top: 20%;
+    transform: translateY(-50%);
+    padding: 10px 20px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+.Cofc {
+    width: 250px;
+    position: absolute;
+    left: 900px;
+    top: 20%;
+    transform: translateY(-50%);
+    padding: 10px 20px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+}

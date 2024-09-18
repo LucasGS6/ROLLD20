@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="Pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roll the Dice</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" sizes="16x16"  href="/images/ROLL-ICON.png">
+    
+</head>
+
+<body>
+    <div class="container" id="container">
+       <div id="bg" class="bg">
+         <div class="bg" id="bg"><img src="images/Tormenta20-icon.png" onclick= "showTormenta20Menu()" alt="tormenta20" id="tormenta20" class="tormenta20"> </div>
+         <div class="bg" id="bg"><img src="images/D&D-icon.png" onclick= "showDndMainMenu()" alt="Dnd" id="Dnd" class="Dnd"> </div>
+         <div class="bg" id="bg"><img src="images/Cofc-icon.png" onclick= "showCofcMainMenu()" alt="Cofc" id="Cofc" class="Cofc"> </div>
+        </div>
+    </div>
+
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-content" id="sidebar-content">
+            <img src="images/D20.png" class="toggle-btn" id="toggle-btn">
+            <div class="dice-container">
+                <img src="images/D6.png" onclick="rollDice6(6)" id="dice6" class="dice6">
+                <img src="images/D20.png" onclick="rollDice20(20)" id="dice20" class="dice20">
+                <img src="images/D4.png" onclick="rollDice4(4)" id="dice4" class="dice4">
+                <img src="images/D10.png" onclick="rollDice10(10)" id="dice10" class="dice10">
+                <img src="images/D12.png" onclick="rollDice12(12)" id="dice12" class="dice12">
+                <img src="images/D8.png" onclick="rollDice8(8)" id="dice8" class="dice8">
+                <img src="images/D100.png" onclick="rollDice100(100)" id="dice100" class="dice100">
+            </div>
+            <div class="shield">
+                <img src="images/shield.png" id="escudo" class="escudo">
+                <label id="result"></label>  
+            </div>
+            
+            </div>
+        </div>
+        </div>
+    </aside>
+
+   
+
+     <div class="tormenta20MainMenu" id="tormenta20MainMenu">
+        <button id="ficha" class="ficha">teste</button>
+        
+    </div>
+    
+     <div class="DndMainMenu" id="DndMainMenu"></div>
+     <div class="CofcMainMenu" id="CofcMainMenu"></div>
+    <img src="images/ROLL THE DICE.png" onclick="showRollTheDiceMenu()" id="rollthedice" class="rollthedice">
+    <button id="MainMenu-button" class="MainMenu-button">MENU</button>  
+    <script src="scripts.js"></script>
+</body>
+
+</html>
