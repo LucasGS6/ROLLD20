@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 body {
     font-family: Arial, sans-serif;
     display: flex;
@@ -48,6 +49,31 @@ body {
     padding-left: 35%;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.back-button {
+    width: 100px; 
+    padding: 5px;
+    background-color: #c52621;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    position: fixed;
+    bottom: 10%;
+    left:89%;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: #a1201c;
+}
+
+.TormentaFicha {
+    display: none;
+    text-align: center;
+    background-size: cover;
+    justify-content: center;
+    border-radius: 8px;
 }
 .CofcMainMenu {
     display: none;
@@ -264,4 +290,61 @@ button:hover {
     font-size: 16px;
     cursor: pointer;
     border-radius: 4px;
+}
+
+.titleFichaT{
+font-family: Arial, Helvetica, sans-serif;
+text-align: center;
+position: absolute;
+bottom: 90%;
+right: 40%;
+}
+.personagens{
+        display: block;
+        overflow-y: auto;
+        max-height: 300px;
+        background-color: #f9f9f9;
+        padding: 250px;
+        padding-left: 450px;
+        padding-right: 450px;
+        margin: 20px 0;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    
+}
+.personagem-list {
+    margin-top: 20px;
+}
+
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 40%;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
 }

@@ -44,10 +44,49 @@
    
 
      <div class="tormenta20MainMenu" id="tormenta20MainMenu">
-        <button id="ficha" class="ficha">teste</button>
+        <button id="ficha" class="ficha" onclick= "showTormentaFicha()" alt="" id="ficha" class="ficha">FICHA</button>
+        
+        
         
     </div>
     
+
+    <div class="TormentaFicha" id="TormentaFicha">
+        <h1 class="titleFichaT">Ficha de Personagens</h1>
+        <button id="backToTormentaMenu" class="back-button">Voltar</button>
+        <div id="personagens" class="personagens">
+            <h2>Personagens</h2>
+            <button id="addPersonagemBtn">Adicionar Personagem</button>
+            
+            <!-- Lista de personagens -->
+            <div id="personagemList">
+                <!-- Os personagens adicionados serão exibidos aqui -->
+
+    <!-- Formulário para adicionar personagens -->
+    <div id="personagemForm" style="display: none;">
+        <h3>Adicionar Personagem</h3>
+        <form id="formPersonagem">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome"><br><br>
+            
+            <label for="idade">Idade:</label>
+            <input type="number" id="idade" name="idade"><br><br>
+            
+            <label for="descricao">Descrição da História:</label><br>
+            <textarea id="descricao" name="descricao"></textarea><br><br>
+            
+            <label for="fichaPdf">Anexar Ficha (PDF):</label>
+            <input type="file" id="fichaPdf" accept="application/pdf"><br><br>
+            
+            <button type="submit">Salvar</button>
+            <button type="button" id="cancelarBtn">Cancelar</button>
+        </form>
+    </div>
+</div>
+        </div>
+        </div>
+    </div>
+
      <div class="DndMainMenu" id="DndMainMenu"></div>
      <div class="CofcMainMenu" id="CofcMainMenu"></div>
     <img src="images/ROLL THE DICE.png" onclick="showRollTheDiceMenu()" id="rollthedice" class="rollthedice">
