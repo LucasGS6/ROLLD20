@@ -62,38 +62,51 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Criar ficha de personagem
-    document.getElementById('addPersonagemBtn')?.addEventListener('click', function() {
+    document.getElementById('addPersonagemBtn').addEventListener('click', function() {
         document.getElementById('personagemForm').style.display = 'block';
     });
 
-    document.getElementById('cancelarBtn')?.addEventListener('click', function() {
+    // Cancelar o formulário
+    document.getElementById('cancelarBtn').addEventListener('click', function() {
         document.getElementById('personagemForm').style.display = 'none';
     });
 
-    document.getElementById('formPersonagem')?.addEventListener('submit', function(e) {
+    // Adicionar personagens na tabela
+    document.getElementById('formPersonagem').addEventListener('submit', function(e) {
         e.preventDefault();
 
         const nome = document.getElementById('nome').value;
         const idade = document.getElementById('idade').value;
         const descricao = document.getElementById('descricao').value;
-        const ficha = document.getElementById('fichaPdf').files[0];
 
-        const personagemDiv = document.createElement('div');
-        personagemDiv.className = 'personagem-item';
-        personagemDiv.innerHTML = `
-            <h3>${nome}</h3>
-            <p><strong>Idade:</strong> ${idade}</p>
-            <p><strong>Descrição:</strong> ${descricao}</p>
-            <p><strong>Ficha:</strong> <a href="${URL.createObjectURL(ficha)}" target="_blank">Ver Ficha</a></p>
-            <button class="delete-personagem">Excluir</button>
+        // Cria a nova linha na tabela
+        const tr = document.createElement('tr');
+        tr.innerHTML = `
+            <td>${nome}</td>
+            <td>${idade}</td>
+            <td>${descricao}</td>
+            <td>
+                <button class="edit-personagem">Editar</button>
+                <button class="delete-personagem">Excluir</button>
+            </td>
         `;
 
-        document.getElementById('personagemList').appendChild(personagemDiv);
+        document.getElementById('personagemList').appendChild(tr);
         document.getElementById('personagemForm').style.display = 'none';
         document.getElementById('formPersonagem').reset();
 
-        personagemDiv.querySelector('.delete-personagem').addEventListener('click', function() {
-            personagemDiv.remove();
+        // Função para deletar personagem
+        tr.querySelector('.delete-personagem').addEventListener('click', function() {
+            tr.remove();
+        });
+
+        // Função para editar personagem
+        tr.querySelector('.edit-personagem').addEventListener('click', function() {
+            document.getElementById('nome').value = nome;
+            document.getElementById('idade').value = idade;
+            document.getElementById('descricao').value = descricao;
+            document.getElementById('personagemForm').style.display = 'block';
+            tr.remove(); // Remove a linha para que a nova edição substitua
         });
     });
 });

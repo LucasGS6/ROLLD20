@@ -155,14 +155,15 @@ body {
 .toggle-btn {
     position: absolute;
     top: 20px;
-    right: -40px; /* Ajuste conforme necessário */
+    right: -50px; /* Ajuste conforme necessário */
     width: 40px;
     height: 40px;
-    background: #4CAF50;
+    background: #bc5fd1;
+    padding: 10%;
     color: white;
     border: none;
     cursor: pointer;
-    border-radius: 50%;
+    border-radius: 30%;
     text-align: center;
     line-height: 10px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
@@ -350,4 +351,59 @@ right: 37%;
     background-color: #000000;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
+}
+
+.form-Personagem{
+    text-align: left;
+    font-size: small;
+    display: flex;
+    padding: 0%;
+    position: fixed;
+    right: 20%;
+    bottom: 50%;
+    
+}
+.input{
+    padding: 1px;
+}
+#personagemList{
+    max-height: 300px;
+    overflow-y: auto;
+}
+#personagemTable {
+    position: fixed;
+    bottom: 70%;
+    width: 45%;
+    right: 40%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#personagemTable th, #personagemTable td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+#personagemTable th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+#personagemList {
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.personagem-item button {
+    padding: 5px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.personagem-item button:hover {
+    background-color: #d32f2f;
 }
