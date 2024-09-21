@@ -372,8 +372,8 @@ right: 37%;
     overflow-y: auto;
 }
 #personagemTable {
-    position: fixed;
-    bottom: 70%;
+    position:fixed;
+    bottom: 80%;
     width: 45%;
     right: 40%;
     border-collapse: collapse;
